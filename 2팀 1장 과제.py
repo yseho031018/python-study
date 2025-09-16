@@ -78,6 +78,8 @@ t.clear()
 # 거북이가 이동할 때 선이 그려지지 않게 하려면 t.up으로 팬을 들고 t.down()으로 팬을 내려놓을 수 있다.
 import turtle as t
 t.shape("turtle")
+t.color("black")
+
 
 # 시작위치 변경
 t.up()
@@ -94,56 +96,51 @@ t.down()
 
 t.fd(100)
 
-
-
 t.clear()
 
 # 연습문제 9번
 # circle()로 원을 그릴 수 있다 배운 내용을 토대로 오륜기를 그려보자 색상 : 파노검초빨
-import turtle as t
 t.shape("turtle")
-t.speed(10)
+t.speed(5)
 
-# 시작위치 변경
+# 팬 위치 변경
 t.up()
-t.goto(-150, 80)
+t.goto(-110, 25)
 t.down()
 
 t.width(5)
-
-# 파란색 원
 t.color("blue")
 t.circle(50)
 
-# 위치 변경
+# 팬 위치 변경
 t.up()
-t.goto(-100, 30)
+t.goto(-55, -25)
 t.down()
-# 노란색 원
+
 t.color("yellow")
 t.circle(50)
 
-# 위치 변경
+# 팬 위치 변경
 t.up()
-t.goto(-40, 80)
+t.goto(0, 25)
 t.down()
-# 검정색 원
+
 t.color("black")
 t.circle(50)
 
-# 위치 변경
+# 팬 위치 변경
 t.up()
-t.goto(20, 30)
+t.goto(55, -25)
 t.down()
-# 초록색 원
+
 t.color("green")
 t.circle(50)
 
-# 위치 변경
+# 팬 위치 변경
 t.up()
-t.goto(80, 80)
+t.goto(110, 25)
 t.down()
-# 빨간색 원
+
 t.color("red")
 t.circle(50)
 
@@ -151,71 +148,122 @@ t.clear()
 
 # 실습문제 1번
 # 자동차 그리기
-import turtle as t
+# 1. 가로 400, 세로 200 크기의 빨간색 자동차 몸통 그리기
+t.penup()
+t.goto(-200, -100)
+t.pendown()
+
 t.shape("turtle")
-
-t.width(1)
 t.color("black")
+t.width(1)
 
-# 팬 위치 이동
-t.up()
-t.goto(-100, 0)
-t.down()
-
-# 자동차 뚜겅 그리기
-t.fillcolor("yellow")
-t.begin_fill()
-t.fd(200)
-t.left(90)
-t.fd(100)
-t.left(90)
-t.fd(200)
-t.left(90)
-t.fd(100)
-t.end_fill()
-
-# 팬 위치 이동
-t.up()
-t.goto(-200, -200)
-t.down()
-
-# 자동차 몸통 사각형 그리기
-t.left(90)
 t.fillcolor("red")
 t.begin_fill()
-t.fd(400)
+
+t.forward(400)
 t.left(90)
-t.fd(200)
+t.forward(200)
 t.left(90)
-t.fd(400)
+t.forward(400)
 t.left(90)
-t.fd(200)
+t.forward(200)
+t.left(90)
+
 t.end_fill()
 
-# 팬 위치 이동
+# 2. 가로 200, 세로 100 크기의 노란색 자동차 뚜껑 그리기
 t.up()
-t.goto(-100, -250)
+t.goto(-100, 100)
 t.down()
 
-# 자동차 바퀴 그리기
+t.fillcolor("yellow")
+t.begin_fill()
+
+t.fd(200)
 t.left(90)
+t.fd(100)
+t.left(90)
+t.fd(200)
+t.left(90)
+t.fd(100)
+t.left(90)
+
+t.end_fill()
+
+# 3. 반지름 50의 검은색 타이어 두개 그리기
+t.up()
+t.goto(-100, -150)
+t.down()
+
 t.fillcolor("black")
 t.begin_fill()
 t.circle(50)
 t.end_fill()
 
 t.up()
-t.goto(150, -200)
+t.goto(100, -150)
 t.down()
 
-# 자동차 바퀴 그리기
-t.left(90)
 t.fillcolor("black")
 t.begin_fill()
 t.circle(50)
+t.clear()
+t.end_fill()
+
+#실습문제 2번
+#집 그림 2
+# 1. 가로 200, 세로 200 크기의 빨간색 집 몸통 그리기
+t.penup()
+t.goto(-100, -100)
+t.pendown()
+
+t.fillcolor("yellow")
+t.begin_fill()
+
+t.forward(200)
+t.left(90)
+t.forward(200)
+t.left(90)
+t.forward(200)
+t.left(90)
+t.forward(200)
+t.left(90)
+
+t.end_fill()
+
+# 2. 초록새 세모 지붕 만들기
+t.penup()
+t.goto(-100, 100)
+t.pendown()
+
+t.fillcolor("green")
+t.begin_fill()
+
+t.forward(200)
+t.left(120)
+t.forward(200)
+t.left(120)
+t.forward(200)
+t.left(120)
+t.end_fill()
+
+
+# 반지름 30 바퀴 두개 그리기
+t.penup()
+t.goto(-50, -150)
+t.pendown()
+
+t.fillcolor("brown")
+t.begin_fill()
+t.circle(25)
+t.end_fill()
+
+t.penup()
+t.goto(50, -150)
+t.pendown()
+
+t.begin_fill()
+t.circle(25)
 t.end_fill()
 
 t.done()
-
-#실습문제 2번
-#자동차 그릭 2
