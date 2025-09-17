@@ -4,15 +4,15 @@
 
 import turtle as t
 
-color1 = input("자동차 몸통의 색상을 영어로 입력하세요.")
-color2 = input("자동차 지붕의 색상을 영어로 입력하세요.")
-color3 = input("자동차 바퀴의 색상을 영어로 입력하세요.")
+size1 = int(input("자동차 몸체 x축길이 "))
+size2 = int(input("자동차 몸체 y축길이 "))
+size3 = int(input("자동차 창문 x축길이 "))
+size4 = int(input("자동차 창문 y축길이 "))
+size5 = int(input("자동차 바퀴 반지름 "))
 
-size1 = int(input("자동차 몸통 가로를 숫자로 입력하세요"))
-size2 = int(input("자동차 몸통 세로를 숫자로 입력하세요"))
-size3 = int(input("자동차 지붕 가로를 숫자로 입력하세요"))
-size4 = int(input("자동차 지붕 세로를 숫자로 입력하세요"))
-size5 = int(input("자동차 바퀴 반지름을 숫자로 입력하세요"))
+color1 = input("자동차 몸체 색깔 ")
+color2 = input("자동차 창문 색깔 ")
+color3 = input("자동차 바퀴 색깔 ")
 
 t.penup()
 t.goto(-size1/2, -size2/2)
@@ -38,7 +38,7 @@ t.end_fill()
 
 # 2. 가로 200, 세로 100 크기의 노란색 자동차 뚜껑 그리기
 t.up()
-t.goto(-size1/4, size2/2)
+t.goto(-size3/2, size2/2)
 t.down()
 
 t.fillcolor(color2)
